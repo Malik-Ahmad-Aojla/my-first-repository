@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .costom-blood-donation-page{
+        width: 100%;
+        
+        max-width: 1400px;
+        margin: 0 auto;
+       
+    }
+    .custom-blood-donation-page h2{
+        color: red;
+        margin: 0 auto;
+       text-align: center;
+       padding: 5px 2px;
+       font-family: sans-serif;
+    }
+    .blood-donation-inner{
+        width: 100%;
+        display: flex;
+        max-width: 1200px;
+        gap: 15px;
+    }
+    .donations-Image-part{
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .dontions-image{
+        width: 100%;
+       
+    }
+    .dontions-image img{
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+        padding: 5px 90px;
+    }
+    .blood-image-description{
+        width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+    }
+    .blood-image-explain{
+        color: rgba(60, 26, 82, 0.65);
+  font-family: sans-serif;
+  text-align: center;
+  padding:5px 50px;
+    }
+    .blood-donation-button {
+    position: relative;
+    width: 130px;
+    height: 26px;
+    background-color: red;
+    overflow: hidden; /* Ensure background stays inside */
+}
+
+.blood-donation-button::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.blood-donation-button:hover::after {
+    width: 100%;
+}
+
+.blood-donation-button a {
+    text-decoration: none;
+    z-index: 3;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    position: relative; /* So it's above the ::after */
+    font-family: sans-serif;
+}
+
+    .drop-icon{
+        color: white;
+       
+    }
+    .Blood-groups-table{
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+    }
+    
+    .donations-table-data{
+        width: 45%;
+        padding: 5px 20px;
+    }
+    .donations-table-heading{
+        background-color: red;
+  padding:12px 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+    }
+    .Blood-groups-table{
+        line-height: 32px;
+    }
+    .Blood-groups-table td{
+        font-weight: 500;
+        opacity: .6;
+    }
+    
+   .Blood-groups-table tr:not(:last-child) {
+    border-bottom: 1px solid #1a17174d;
+}
+.group-data{
+    color: red;
+
+}
+@media only screen and (max-width:900px) {
+    .blood-donation-inner{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .donations-Image-part{
+        width: 100%;
+    }
+    .donations-Image-part img{
+        height: 400px;
+    }
+    .donations-table-data{
+        width: 100%;
+    }
+}
+</style>
+<body>
+    <div class="custom-blood-donation-page">
+        <h2>LEARN ABOUT DONATION</h2>
+        <div class="blood-donation-inner">
+            <div class="donations-Image-part">
+                <div class="dontions-image">
+                    <img src="Blood.jpg" alt="">
+                </div>
+                <div class="blood-image-description">
+                    <h3 class="blood-image-explain">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita distinctio odit nobis provident quasi nulla a deserunt aliquam sit
+                    </h3>
+                    <div class="blood-donation-button">
+                        <a href="#" class="blood-ancor"><ion-icon name="water-outline" class="drop-icon"></ion-icon ><span>Donate Now</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="donations-table-data">
+                <div class="donations-table-heading">Compatible Blood Type Donners</div>
+                <table class="Blood-groups-table"  cellspacing="5px" cellpadding="10px" width="100%">
+                    <tr>
+                        <th class="td-heading">Blood Types</th>
+                        <th class="td-heading">Donate Blood To</th>
+                        <th class="td-heading">Recieve Blood From</th>
+                    </tr>
+                    <tr>
+                        <td class="group-data">A+</td>
+                        <td>A+ AB+</td>
+                        <td>A+ A- O+ O-</td>
+                    </tr>
+                    <tr>
+                        <td class="group-data">O+</td>
+                        <td>O+ A+ B+ AB+</td>
+                        <td> O+ O-</td>
+                    </tr>
+                    <tr>
+                        <td class="group-data">B+</td>
+                        <td>B+ AB+</td>
+                        <td>B+ B- O+ O-</td>
+                    </tr>
+                    <tr>
+                        <td class="group-data">AB+</td>
+                        <td> AB+</td>
+                        <td>EVERY ONE</td>
+                    </tr>
+                    <tr>
+                        <td class="group-data">A-</td>
+                        <td>A+ A- AB+ AB-</td>
+                        <td> A- O-</td>
+                    </tr>
+                    <tr>
+                        <td class="group-data">O-</td>
+                        <td>EVERY ONE</td>
+                        <td>O-</td>
+                    </tr>
+                    <tr>
+                        <td class="group-data">B-</td>
+                        <td>B+ B- AB+ AB-</td>
+                        <td>B- O-</td>
+                    </tr>
+                    <tr>
+                        <td class="group-data">AB-</td>
+                        <td>AB+ AB-</td>
+                        <td>A- B- O- AB-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
