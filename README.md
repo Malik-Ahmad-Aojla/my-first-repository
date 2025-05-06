@@ -1,2 +1,3 @@
 # my-first-repository
-Hello world
+That is my first project on gitHub.com.
+Author- Malik Muhammad Ahmad
